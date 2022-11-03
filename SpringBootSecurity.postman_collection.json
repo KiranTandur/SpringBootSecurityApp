@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "90342147-6ca5-40fc-bc76-91d633f5d0ef",
+		"name": "SpringBootSecurity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SpringSecurity Get API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mahesh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8139/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8139",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding User Using Role Based API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mahesh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":4,\r\n    \"username\":\"Ravi\",\r\n    \"password\":\"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8139/users/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8139",
+					"path": [
+						"users",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
